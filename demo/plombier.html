@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Durand Plomberie — Plombier chauffagiste (exemple)</title>
+<meta name="description" content="Exemple de site réalisé par Vitrine Express. Entreprise fictive.">
+<style>
+  :root{--bg:#f7f9fb;--surface:#fff;--ink:#14212b;--muted:#5a6b78;--line:#e1e7ec;--brand:#0a7c86;--brand-ink:#fff;--warn:#e85d2a}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0f1519;--surface:#172027;--ink:#e8eef2;--muted:#9fb0bc;--line:#26323b;--brand:#2fb6c1;--brand-ink:#06171a;--warn:#ff8a5c}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+  .demo-bar{background:var(--warn);color:#fff;text-align:center;font-size:.85rem;padding:6px 12px}
+  .demo-bar a{color:#fff;font-weight:700}
+  header{background:var(--surface);border-bottom:1px solid var(--line)}
+  nav{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .logo{font-weight:800}
+  .call{background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:700;padding:10px 18px;border-radius:999px}
+  .hero{padding-top:70px;padding-bottom:70px}
+  h1{font-size:clamp(1.9rem,5vw,3rem);line-height:1.15;max-width:18ch}
+  .hero p{color:var(--muted);font-size:1.1rem;margin:16px 0 26px;max-width:52ch}
+  .tags{display:flex;gap:10px;flex-wrap:wrap}
+  .tags span{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:.9rem}
+  section{padding:56px 0;border-top:1px solid var(--line)}
+  h2{font-size:1.7rem;margin-bottom:24px}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card h3{margin-bottom:6px}
+  .card p{color:var(--muted)}
+  .stars{color:#f5a623;letter-spacing:2px}
+  .info{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+  table{width:100%;border-collapse:collapse}
+  td{padding:6px 0;border-bottom:1px solid var(--line)}
+  td:last-child{text-align:right;color:var(--muted)}
+  footer{padding:30px 0;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+  .sticky-call{display:none}
+  @media (max-width:640px){.sticky-call{display:block;position:fixed;bottom:14px;left:16px;right:16px;text-align:center;padding:14px;border-radius:12px;background:var(--brand);color:var(--brand-ink);font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.25)} body{padding-bottom:80px}}
+</style>
+</head>
+<body>
+<div class="demo-bar">Ceci est un exemple de site (entreprise fictive) réalisé par <a href="../index.html">Vitrine Express</a></div>
+<header><nav class="wrap"><div class="logo">🔧 Durand Plomberie</div><a class="call" href="tel:+33000000000">📞 Appeler</a></nav></header>
+
+<div class="hero wrap">
+  <h1>Votre plombier à Lyon et alentours, intervention rapide</h1>
+  <p>Fuite, chauffe-eau en panne, salle de bain à rénover ? Devis gratuit et intervention sous 24h, 6j/7.</p>
+  <div class="tags"><span>✅ Devis gratuit</span><span>⏱️ Sous 24h</span><span>🛡️ Garantie décennale</span><span>⭐ 4,9/5 sur Google</span></div>
+</div>
+
+<section><div class="wrap">
+  <h2>Nos services</h2>
+  <div class="grid">
+    <div class="card"><h3>Dépannage urgent</h3><p>Fuites, canalisations bouchées, WC : on intervient vite.</p></div>
+    <div class="card"><h3>Chauffe-eau</h3><p>Réparation, remplacement et installation de ballons thermodynamiques.</p></div>
+    <div class="card"><h3>Salle de bain</h3><p>Rénovation complète, douche à l'italienne, accessibilité PMR.</p></div>
+    <div class="card"><h3>Chauffage</h3><p>Entretien de chaudière, radiateurs, pompe à chaleur.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2>Ils nous font confiance</h2>
+  <div class="grid">
+    <div class="card"><div class="stars">★★★★★</div><p>« Venu le jour même pour une fuite, travail propre et prix annoncé respecté. »</p><p><b>Sophie L.</b></p></div>
+    <div class="card"><div class="stars">★★★★★</div><p>« Notre salle de bain est méconnaissable. Équipe ponctuelle et de bon conseil. »</p><p><b>Karim B.</b></p></div>
+    <div class="card"><div class="stars">★★★★★</div><p>« Chauffe-eau remplacé en 2h. Je recommande sans hésiter. »</p><p><b>Marie-Claire D.</b></p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap info">
+  <div class="card"><h2>Horaires</h2>
+    <table>
+      <tr><td>Lundi – Vendredi</td><td>7h30 – 19h</td></tr>
+      <tr><td>Samedi</td><td>8h – 17h</td></tr>
+      <tr><td>Dimanche</td><td>Urgences uniquement</td></tr>
+    </table>
+  </div>
+  <div class="card"><h2>Zone d'intervention</h2><p>Lyon 1er au 9e, Villeurbanne, Caluire, Bron, Vénissieux, Écully, Tassin.</p></div>
+</div></section>
+
+<footer><div class="wrap">Entreprise fictive : exemple de démonstration · Site réalisé par Vitrine Express</div></footer>
+<a class="sticky-call" href="tel:+33000000000">📞 Appeler maintenant</a>
+</body>
+</html>

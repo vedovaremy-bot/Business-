@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vitrine Express — Votre site professionnel en 72h</title>
+<meta name="description" content="Site vitrine professionnel pour artisans, commerçants et indépendants. Livré en 72h, à partir de 290 €. Visible sur Google, adapté au mobile.">
+<style>
+  :root{
+    --bg:#fbfaf7; --surface:#ffffff; --ink:#1b1d22; --muted:#5d6370; --line:#e6e3dc;
+    --brand:#1f5eff; --brand-ink:#ffffff; --accent:#ffb020; --ok:#13804b;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#111317; --surface:#1a1d23; --ink:#eef0f3; --muted:#a3a9b5; --line:#2b2f37;
+      --brand:#5b8cff; --brand-ink:#0b0d12; --accent:#ffc04d; --ok:#3ccf86;
+    }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  header{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+  nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:1.15rem;text-decoration:none}
+  .logo span{color:var(--brand)}
+  .btn{display:inline-block;background:var(--brand);color:var(--brand-ink);padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:0;cursor:pointer;font-size:1rem}
+  .btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+  .hero{padding-top:80px;padding-bottom:60px}
+  .pill{display:inline-block;background:color-mix(in srgb,var(--accent) 22%,transparent);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:.85rem;font-weight:600;margin-bottom:18px}
+  h1{font-size:clamp(2rem,5vw,3.3rem);line-height:1.12;letter-spacing:-.02em;max-width:16ch}
+  h1 em{font-style:normal;color:var(--brand)}
+  .lead{font-size:1.15rem;color:var(--muted);max-width:56ch;margin:20px 0 30px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .trust{display:flex;gap:24px;flex-wrap:wrap;margin-top:34px;color:var(--muted);font-size:.95rem}
+  .trust b{color:var(--ink)}
+  section{padding:70px 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(1.6rem,3.5vw,2.2rem);letter-spacing:-.01em;margin-bottom:12px}
+  .sub{color:var(--muted);margin-bottom:36px;max-width:60ch}
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .card h3{font-size:1.1rem;margin-bottom:8px}
+  .card p{color:var(--muted)}
+  .num{font-size:.85rem;font-weight:800;color:var(--brand);margin-bottom:8px}
+  .price{position:relative}
+  .price.featured{border:2px solid var(--brand)}
+  .badge{position:absolute;top:-12px;right:18px;background:var(--brand);color:var(--brand-ink);font-size:.75rem;font-weight:700;padding:4px 10px;border-radius:999px}
+  .amount{font-size:2.3rem;font-weight:800;margin:6px 0}
+  .amount small{font-size:1rem;color:var(--muted);font-weight:500}
+  .price ul{list-style:none;margin:16px 0 22px}
+  .price li{padding:6px 0 6px 26px;position:relative;color:var(--ink)}
+  .price li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:800}
+  .price .btn{width:100%;text-align:center}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+  summary{font-weight:700;cursor:pointer}
+  details p{color:var(--muted);margin-top:10px}
+  form{display:grid;gap:14px;max-width:560px}
+  label{font-weight:600;font-size:.95rem}
+  input,select,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit;margin-top:6px}
+  textarea{min-height:110px;resize:vertical}
+  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+  @media (max-width:600px){ nav .btn{padding:9px 14px;font-size:.9rem} .hero{padding-top:50px;padding-bottom:40px} }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="logo" href="#">Vitrine<span>Express</span></a>
+    <a class="btn" href="#contact">Devis gratuit</a>
+  </nav>
+</header>
+
+<main>
+  <div class="hero wrap">
+    <span class="pill">⚡ Livraison en 72h · Sans abonnement caché</span>
+    <h1>Votre site professionnel, <em>prêt en 72h</em>.</h1>
+    <p class="lead">Artisans, commerçants, indépendants : vos clients vous cherchent sur Google. Avec un site clair, rapide et adapté au mobile, ils vous trouvent et vous appellent.</p>
+    <div class="cta-row">
+      <a class="btn" href="#contact">Je veux mon site</a>
+      <a class="btn ghost" href="demo/plombier.html">Voir un exemple</a>
+    </div>
+    <div class="trust">
+      <div><b>290 €</b> tout compris</div>
+      <div><b>72h</b> de délai</div>
+      <div><b>0 €</b> d'acompte avant la maquette</div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Pourquoi un site en 2026 ?</h2>
+      <p class="sub">Une fiche Google ou une page Facebook ne suffit plus. Un site à votre nom inspire confiance et vous rapporte des clients 24h/24.</p>
+      <div class="grid">
+        <div class="card"><h3>📍 Trouvé sur Google</h3><p>Vos horaires, vos services et votre zone d'intervention apparaissent quand on cherche votre métier près de chez vous.</p></div>
+        <div class="card"><h3>📱 Parfait sur mobile</h3><p>8 visiteurs sur 10 arrivent depuis un téléphone. Un bouton les met en relation avec vous en un geste.</p></div>
+        <div class="card"><h3>🤝 Plus de confiance</h3><p>Photos, avis et réalisations : vos futurs clients savent à qui ils ont affaire avant même de vous appeler.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Comment ça marche</h2>
+      <p class="sub">Vous n'avez rien de technique à faire. On s'occupe de tout.</p>
+      <div class="grid">
+        <div class="card"><div class="num">ÉTAPE 1</div><h3>Appel de 15 min</h3><p>Vous me présentez votre activité, vos services et vos photos.</p></div>
+        <div class="card"><div class="num">ÉTAPE 2</div><h3>Maquette en 48h</h3><p>Vous voyez votre site avant de payer quoi que ce soit.</p></div>
+        <div class="card"><div class="num">ÉTAPE 3</div><h3>Mise en ligne</h3><p>Vous validez, vous réglez, votre site est en ligne avec votre nom de domaine.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="tarifs">
+    <div class="wrap">
+      <h2>Tarifs simples</h2>
+      <p class="sub">Paiement uniquement après validation de la maquette.</p>
+      <div class="grid">
+        <div class="card price">
+          <h3>Essentiel</h3>
+          <div class="amount">290 € <small>une fois</small></div>
+          <ul>
+            <li>Site d'une page complet</li>
+            <li>Adapté mobile et tablette</li>
+            <li>Bouton d'appel et formulaire</li>
+            <li>Référencement Google de base</li>
+            <li>Livré en 72h</li>
+          </ul>
+          <a class="btn ghost" href="#contact">Choisir Essentiel</a>
+        </div>
+        <div class="card price featured">
+          <span class="badge">Le plus choisi</span>
+          <h3>Pro</h3>
+          <div class="amount">490 € <small>une fois</small></div>
+          <ul>
+            <li>Tout l'Essentiel</li>
+            <li>Jusqu'à 5 pages</li>
+            <li>Galerie de réalisations</li>
+            <li>Optimisation de la fiche Google</li>
+            <li>Nom de domaine offert 1 an</li>
+          </ul>
+          <a class="btn" href="#contact">Choisir Pro</a>
+        </div>
+        <div class="card price">
+          <h3>Sérénité</h3>
+          <div class="amount">29 € <small>/ mois</small></div>
+          <ul>
+            <li>Hébergement et nom de domaine</li>
+            <li>Modifications illimitées</li>
+            <li>Sauvegardes et sécurité</li>
+            <li>Sans engagement</li>
+          </ul>
+          <a class="btn ghost" href="#contact">Ajouter Sérénité</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Questions fréquentes</h2>
+      <details><summary>Dois-je payer avant de voir le site ?</summary><p>Non. Vous voyez la maquette d'abord, vous ne payez que si elle vous plaît.</p></details>
+      <details><summary>Je n'ai pas de photos ni de textes, c'est un problème ?</summary><p>Pas du tout. Je rédige les textes à partir de notre appel et j'utilise des photos libres de droits de qualité en attendant les vôtres.</p></details>
+      <details><summary>Le site m'appartient-il ?</summary><p>Oui, à 100 %. Le nom de domaine est à votre nom et vous pouvez récupérer les fichiers à tout moment.</p></details>
+      <details><summary>Et si je veux modifier quelque chose plus tard ?</summary><p>Avec la formule Sérénité c'est illimité. Sinon, chaque modification est facturée 30 €.</p></details>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <h2>Demandez votre maquette gratuite</h2>
+      <p class="sub">Réponse sous 24h. Sans engagement.</p>
+      <!-- Remplace VOTRE_ID_FORMSPREE par ton identifiant (voir README) -->
+      <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="POST">
+        <label>Votre nom<input name="nom" required autocomplete="name"></label>
+        <label>Nom de votre entreprise<input name="entreprise" required></label>
+        <label>Métier / activité<input name="metier" placeholder="Ex. plombier, coiffeuse, boulangerie…" required></label>
+        <label>Téléphone<input name="telephone" type="tel" required autocomplete="tel"></label>
+        <label>E-mail<input name="email" type="email" required autocomplete="email"></label>
+        <label>Formule souhaitée
+          <select name="formule">
+            <option>Essentiel — 290 €</option>
+            <option selected>Pro — 490 €</option>
+            <option>Je ne sais pas encore</option>
+          </select>
+        </label>
+        <label>Un message ? (facultatif)<textarea name="message"></textarea></label>
+        <button class="btn" type="submit">Recevoir ma maquette gratuite</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Vitrine Express · [Ton nom] — Entrepreneur individuel · SIRET [à compléter] · <a href="mentions-legales.html">Mentions légales</a></div>
+</footer>
+
+</body>
+</html>
