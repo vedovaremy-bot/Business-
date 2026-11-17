@@ -27,12 +27,12 @@ Les listes de tendances de cette saison (sites d'outils de dropshipping) citent 
 
 | | 1 chaufferette | Pack de 2 (cadeau) |
 |---|---|---|
-| Prix de vente | 29,90 € | 44,90 € |
-| Coût produit + livraison (entrepôt UE) | ~12 € | ~22 € |
-| Frais de paiement et Shopify (~3 %) | ~1 € | ~1,40 € |
-| **Marge avant publicité** | **~17 €** | **~21,50 €** |
+| Prix de vente | 22,90 € | 34,90 € (coffret duo) |
+| Coût produit + livraison (entrepôt UE) | ~11 € | ~19 € |
+| Frais de paiement et Shopify (~3 %) | ~0,70 € | ~1 € |
+| **Marge avant publicité** | **~11 €** | **~15 €** |
 
-Le coût de la publicité par vente doit rester **sous 17 €** pour gagner de l'argent. Par exemple : 100 ventes avec une pub à 10 € par vente font environ 700 € de bénéfice net, avant cotisations sociales.
+Prix revus après l'étude de marché (voir `etude-marche.md`) : la publicité doit coûter **moins de 12 €** par vente.
 
 **Budget de départ réaliste : 300 à 500 €.**
 - Shopify : environ 1 € par mois pendant l'essai, puis ~36 €/mois.
