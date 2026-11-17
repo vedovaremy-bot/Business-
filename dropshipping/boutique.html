@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kalor — Chaufferette rechargeable</title>
+<meta name="description" content="Chaufferette de poche rechargeable USB-C, sert aussi de batterie de secours. Livraison offerte en France.">
+<style>
+  :root{--bg:#fff8f3;--surface:#fff;--ink:#231a15;--muted:#6f625a;--line:#f0e2d8;--brand:#e8541c;--brand-ink:#fff;--cold:#3a7bd5;--ok:#1d8a4e}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#15100d;--surface:#1f1814;--ink:#f7ede6;--muted:#b8a79c;--line:#33281f;--brand:#ff6b33;--brand-ink:#1a0d06;--cold:#6aa3f0;--ok:#43c47f}}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  .topbar{background:var(--ink);color:var(--bg);text-align:center;font-size:.85rem;padding:8px 12px;font-weight:600}
+  header nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .logo{font-weight:900;font-size:1.4rem;letter-spacing:-.02em}
+  .logo span{color:var(--brand)}
+  .product{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;padding-top:30px;padding-bottom:60px;align-items:start}
+  .visual{aspect-ratio:1/1;border-radius:22px;background:radial-gradient(circle at 50% 55%,color-mix(in srgb,var(--brand) 45%,transparent),transparent 60%),linear-gradient(160deg,color-mix(in srgb,var(--cold) 25%,var(--surface)),var(--surface));border:1px solid var(--line);display:grid;place-items:center;position:relative;overflow:hidden}
+  .device{width:38%;aspect-ratio:.62;border-radius:40px;background:linear-gradient(145deg,#3a3532,#1c1917);box-shadow:0 30px 60px rgba(232,84,28,.35),inset 0 2px 0 rgba(255,255,255,.12);position:relative}
+  .device::after{content:"";position:absolute;left:50%;top:22%;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:#ff7a3d;box-shadow:0 0 14px #ff7a3d}
+  .visual small{position:absolute;bottom:14px;color:var(--muted);font-size:.8rem}
+  h1{font-size:clamp(1.7rem,4vw,2.4rem);line-height:1.15;letter-spacing:-.02em}
+  .rating{color:var(--muted);font-size:.9rem;margin:10px 0}
+  .price{display:flex;align-items:baseline;gap:12px;margin:16px 0}
+  .price b{font-size:2rem}
+  .bullets{list-style:none;margin:18px 0}
+  .bullets li{padding:6px 0 6px 28px;position:relative}
+  .bullets li::before{content:"🔥";position:absolute;left:0}
+  .offers{display:grid;gap:10px;margin:20px 0}
+  .offer{display:flex;align-items:center;gap:12px;border:2px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;background:var(--surface)}
+  .offer:has(input:checked){border-color:var(--brand)}
+  .offer input{accent-color:var(--brand);width:18px;height:18px}
+  .offer .t{flex:1} .offer .t b{display:block}
+  .offer .t span{color:var(--muted);font-size:.9rem}
+  .offer .t .tag{color:var(--brand-ink);font-size:.72rem}
+  .offer .p{font-weight:800}
+  .tag{background:var(--brand);color:var(--brand-ink);font-size:.72rem;font-weight:800;padding:3px 8px;border-radius:999px;margin-left:6px}
+  .buy{display:block;width:100%;text-align:center;background:var(--brand);color:var(--brand-ink);font-weight:800;font-size:1.1rem;padding:16px;border-radius:14px;text-decoration:none;border:0;cursor:pointer}
+  .reassure{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px;font-size:.82rem;color:var(--muted);text-align:center}
+  section{padding:60px 0;border-top:1px solid var(--line)}
+  h2{font-size:clamp(1.5rem,3.4vw,2rem);margin-bottom:24px;letter-spacing:-.01em}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+  .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .card .ic{font-size:1.6rem;margin-bottom:6px}
+  .card p{color:var(--muted)}
+  .compare{width:100%;border-collapse:collapse;background:var(--surface);border-radius:16px;overflow:hidden;border:1px solid var(--line)}
+  .compare th,.compare td{padding:14px;border-bottom:1px solid var(--line);text-align:center}
+  .compare th:first-child,.compare td:first-child{text-align:left}
+  .compare .us{color:var(--ok);font-weight:800}
+  .note{border:2px dashed var(--line);border-radius:16px;padding:22px;color:var(--muted);text-align:center}
+  details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:10px}
+  summary{font-weight:700;cursor:pointer}
+  details p{color:var(--muted);margin-top:8px}
+  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+  footer a{color:inherit;margin-right:14px}
+  .sticky{display:none}
+  @media (max-width:820px){
+    .product{grid-template-columns:1fr;gap:24px;padding-top:16px}
+    .sticky{display:block;position:fixed;left:16px;right:16px;bottom:14px;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    body{padding-bottom:86px}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">🚚 Livraison offerte en France · Expédié depuis l'Europe en 3 à 7 jours ouvrés</div>
+<header><nav class="wrap"><div class="logo">Ka<span>lor</span></div><a href="#faq" style="color:inherit">Aide</a></nav></header>
+
+<main>
+  <div class="wrap product">
+    <div class="visual">
+      <div class="device"></div>
+      <small>À remplacer par tes photos et vidéos de l'échantillon</small>
+    </div>
+
+    <div>
+      <h1>Chaufferette rechargeable : chaleur instantanée, toute la journée</h1>
+      <p class="rating">Rechargeable USB-C · Batterie de secours intégrée</p>
+      <div class="price"><b>29,90 €</b></div>
+
+      <ul class="bullets">
+        <li>Chauffe en quelques secondes, [X] niveaux de chaleur</li>
+        <li>Jusqu'à [X] heures d'autonomie par charge</li>
+        <li>Recharge aussi votre téléphone ([X] mAh)</li>
+        <li>Réutilisable : adieu les chaufferettes jetables</li>
+      </ul>
+
+      <form class="offers" onsubmit="return false">
+        <label class="offer"><input type="radio" name="o" value="1">
+          <span class="t"><b>1 chaufferette</b><span>Pour vous</span></span><span class="p">29,90 €</span></label>
+        <label class="offer"><input type="radio" name="o" value="2" checked>
+          <span class="t"><b>Pack de 2 <span class="tag">IDÉE CADEAU</span></b><span>Une pour vous, une à offrir · 22,45 € l'unité</span></span><span class="p">44,90 €</span></label>
+      </form>
+
+      <!-- Dans Shopify, ce bouton devient « Ajouter au panier » -->
+      <a class="buy" href="#">Commander maintenant</a>
+      <div class="reassure"><div>🔒<br>Paiement sécurisé</div><div>↩️<br>14 jours pour changer d'avis</div><div>🛡️<br>Garantie 2 ans</div></div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>Pensée pour les journées froides</h2>
+      <div class="grid">
+        <div class="card"><div class="ic">⚡</div><h3>Chaleur immédiate</h3><p>Un appui, et la chaleur arrive en quelques secondes. Fini d'attendre que la chaufferette « prenne ».</p></div>
+        <div class="card"><div class="ic">🔋</div><h3>2 en 1</h3><p>Batterie de secours intégrée : votre téléphone ne vous lâche plus dehors.</p></div>
+        <div class="card"><div class="ic">🌱</div><h3>Réutilisable</h3><p>Se recharge des centaines de fois. Fini les sachets jetables.</p></div>
+        <div class="card"><div class="ic">🎁</div><h3>Le cadeau qui sert</h3><p>Pour les sportifs, les supporters, les travailleurs dehors et les frileux de la famille.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Rechargeable ou jetable ?</h2>
+      <table class="compare">
+        <tr><th></th><th>Kalor</th><th>Jetable</th></tr>
+        <tr><td>Réutilisable</td><td class="us">✓</td><td>✗</td></tr>
+        <tr><td>Chaleur réglable</td><td class="us">✓</td><td>✗</td></tr>
+        <tr><td>Recharge votre téléphone</td><td class="us">✓</td><td>✗</td></tr>
+        <tr><td>Zéro déchet</td><td class="us">✓</td><td>✗</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Avis clients</h2>
+      <!-- N'affiche ici QUE de vrais avis (appli Judge.me). Les faux avis sont illégaux. -->
+      <div class="note">Les avis vérifiés de vos premiers clients s'afficheront ici.</div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Questions fréquentes</h2>
+      <details><summary>Quand vais-je recevoir ma commande ?</summary><p>Expédition sous 48h depuis notre entrepôt européen, livraison en 3 à 7 jours ouvrés. Vous recevez un numéro de suivi par e-mail.</p></details>
+      <details><summary>Je la reçois à temps pour Noël ?</summary><p>Pour toute commande passée avant le [date limite réelle], oui.</p></details>
+      <details><summary>Combien de temps tient la batterie ?</summary><p>Jusqu'à [X] heures selon le niveau de chaleur choisi. Recharge complète en [X] heures avec le câble USB-C fourni.</p></details>
+      <details><summary>Est-ce sans danger ?</summary><p>Produit certifié CE, avec protection contre la surchauffe. Ne pas utiliser pendant le sommeil ni en contact prolongé avec une peau sensible.</p></details>
+      <details><summary>Et si elle ne me plaît pas ?</summary><p>Vous avez 14 jours après réception pour nous la retourner et être remboursé. Le produit est aussi couvert par la garantie légale de conformité de 2 ans.</p></details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Kalor · [Ton nom], entrepreneur individuel · SIRET [à compléter] · Contact : [e-mail du service client]</p>
+    <p style="margin-top:8px"><a href="#">CGV</a><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">Retours et remboursements</a></p>
+  </div>
+</footer>
+
+<a class="buy sticky" href="#">Commander : 44,90 € le pack de 2</a>
+</body>
+</html>
